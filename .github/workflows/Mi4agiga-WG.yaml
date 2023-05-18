@@ -4,7 +4,7 @@
 # Author: Musha
 #=================================================
 
-name: Build_Mi4aGiga
+name: Build_Mi4aGiga_WG
 
 # Add a button to trigger the workflow
 on:
