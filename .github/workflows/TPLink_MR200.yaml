@@ -4,7 +4,7 @@
 # Author: Musha
 #=================================================
 
-name: Build_TPLink_MR200_WG
+name: Build_TPLink_MR200
 
 # Add a button to trigger the workflow
 on:
@@ -50,12 +50,11 @@ jobs:
       - name: Clone source code
         env:
           REPO_URL: https://github.com/immortalwrt/immortalwrt.git
-          REPO_BRANCH: openwrt-21.02
+          REPO_BRANCH: openwrt-18.06
         run: |
           git clone $REPO_URL openwrt
           cd openwrt
-          git fetch --tags
-          git checkout v21.02.6
+          git checkout $REPO_BRANCH
 
       - name: Update & Install feeds
         working-directory: ./openwrt
