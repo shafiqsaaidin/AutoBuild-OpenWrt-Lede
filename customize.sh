@@ -2,14 +2,10 @@
 #=================================================
 # Description: DIY script
 # Lisence: MIT
-# Author: eSirPlayground
-# Youtube Channel: https://goo.gl/fvkdwm 
+# Author: Musha
 #=================================================
 #1. Modify default IP
 #sed -i 's/192.168.1.1/192.168.5.1/g' openwrt/package/base-files/files/bin/config_generate
 
-#2. Clear the login password
-#sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
-
-#3. Replace with JerryKuKu’s Argon
-#rm openwrt/package/lean/luci-theme-argon -rf
+#2. Modify xray core to v1.7.5.1
+sed -e 's/1.8.1/1.7.5.1/' -e 's/XTLS/mssvpn/' openwrt/package/feeds/packages/xray-core/Makefile
